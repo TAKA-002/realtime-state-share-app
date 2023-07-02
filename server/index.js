@@ -16,6 +16,13 @@ const PORT = 5001;
 io.on("connection", (socket) => {
   console.log("クライアントと通信しました。");
 
+  // クライアントから受信
+  socket.on("send_name_id", (data) => {
+    console.log(data);
+
+    io.emit("recieved_name_id", data);
+  });
+
   socket.on("disconnect", () => {
     console.log("クライアントと接続が切れました。");
   });
