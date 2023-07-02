@@ -1,8 +1,10 @@
 import Button from "@mui/material/Button";
 
 const BaseButton = ({ setState }) => {
+  const iniStateVal = 100;
+
   const handleClick = (e) => {
-    setState(100);
+    setState(iniStateVal);
   };
 
   return (
