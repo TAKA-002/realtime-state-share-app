@@ -11,12 +11,12 @@ const io = new Server(server, {
 
 const PORT = 5001;
 
-// クライアントと通信
-// io.on：クライアント => サーバー 受け取る
+// io.on：クライアントからサーバーへの通信をつなげる
 io.on("connection", (socket) => {
-  console.log("クライアントと通信しました。");
-
-  // クライアントから受信
+  /**
+   * クライアントからのデータを受信する
+   * 「send_name_id」は、
+   */
   socket.on("send_name_id", (data) => {
     console.log(data);
 

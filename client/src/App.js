@@ -8,6 +8,7 @@ import BaseSelect from "./components/ui/BaseSelect";
 function App() {
   const [special, setSpecial] = useState(100);
   const [free, setFree] = useState(100);
+  const [toppage, setToppage] = useState(100);
 
   const sectionStyle = {
     margin: "48px 24px",
@@ -34,6 +35,11 @@ function App() {
 
         <StacksList mt="40px">
           <BaseSelect name="freespace" labelText="フリースペース" stateData={free} setState={setFree} />
+          <Button setState={setFree} />
+        </StacksList>
+
+        <StacksList mt="40px">
+          <BaseSelect name="toppage" labelText="トップページ" stateData={toppage} setState={setToppage} />
           <Button setState={setFree} />
         </StacksList>
       </section>
